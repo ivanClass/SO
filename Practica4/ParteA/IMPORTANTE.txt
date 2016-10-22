@@ -1,0 +1,8 @@
+--1.- Hacer make clean
+--2.- Hacer make
+-- A PARTIR DE AQUI CONTINUAR COMO USUARIO ROOT --
+--3.- Instalar el módulo leds.ko --> insmod leds.ko
+--4.- Ejecutar comando dmesg|tail para ver como hay que crear el archivo /dev/leds..
+--5.- Por ejemplo: 'sudo mknod -m 666 /dev/leds c 250 0'
+--6.- Para eliminar el driver completamente: rmmod chardev_leds.ko y rm -rf /dev/leds
+

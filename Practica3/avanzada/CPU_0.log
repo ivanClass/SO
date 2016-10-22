@@ -1,0 +1,133 @@
+(t0): New task P1
+(t0): New task P2
+(t0): New task P3
+(t0): P1 running
+(t1): P1 running
+(t1): Context switch (P1)<->(P2)
+(t2): P2 running
+(t3): P2 running
+(t3): Context switch (P2)<->(P3)
+(t4): P3 running
+(t5): P3 running
+(t5): Context switch (P3)<->(P1)
+(t6): P1 running
+(t7): Task P1 goes to sleep until (t12)
+(t6): Context switch (P1)<->(P2)
+(t7): P2 running
+(t8): P2 running
+(t9): P2 running
+(t10): P2 running
+(t10): Context switch (P2)<->(P3)
+(t11): P3 running
+(t12): task P1 awoken
+(t12): P3 running
+(t13): P3 running
+(t14): Task P3 goes to sleep until (t19)
+(t13): Context switch (P3)<->(P1)
+(t14): P1 running
+(t15): P1 running
+(t16): P1 running
+(t17): Task P1 goes to sleep until (t22)
+(t16): Context switch (P1)<->(P2)
+(t17): P2 running
+(t18): P2 running
+(t19): Task P2 goes to sleep until (t24)
+(t19): task P3 awoken
+(t18): Context switch (P2)<->(P3)
+(t19): P3 running
+(t20): P3 running
+(t21): P3 running
+(t22): task P1 awoken
+(t22): P3 running
+(t23): P3 running
+(t24): Task P3 goes to sleep until (t29)
+(t24): task P2 awoken
+(t23): Context switch (P3)<->(P1)
+(t24): P1 running
+(t25): P1 running
+(t26): P1 running
+(t27): Task P1 goes to sleep until (t32)
+(t26): Context switch (P1)<->(P2)
+(t27): P2 running
+(t28): P2 running
+(t29): task P3 awoken
+(t29): P2 running
+(t30): P2 running
+(t30): Context switch (P2)<->(P3)
+(t31): P3 running
+(t32): P3 running
+(t32): Context switch (P3)<->(P2)
+(t33): P2 running
+(t33): Context switch (P2)<->(P3)
+(t34): P3 running
+(t34): Context switch (P3)<->(P2)
+(t35): P2 running
+(t35): Context switch (P2)<->(P3)
+(t36): P3 running
+(t36): Context switch (P3)<->(P2)
+(t37): P2 running
+(t37): Context switch (P2)<->(P3)
+(t38): P3 running
+(t39): Task P3 goes to sleep until (t44)
+(t38): Context switch (P3)<->(P2)
+(t39): P2 running
+(t40): Task P2 goes to sleep until (t45)
+(t39): Context switch (P2)<->(idle)
+(t40): idle running
+(t41): idle running
+(t42): idle running
+(t43): idle running
+(t44): idle running
+(t45): task P2 awoken
+(t44): Context switch (idle)<->(P2)
+(t45): P2 running
+(t46): P2 running
+(t47): P2 running
+(t48): P2 running
+(t49): P2 running
+==================
+P1	0	2	run
+P1	2	6	wait
+P1	6	7	run
+P1	7	12	io
+P1	12	14	wait
+P1	14	17	run
+P1	17	22	io
+P1	22	24	wait
+P1	24	27	run
+P1	27	32	io
+P2	0	2	wait
+P2	2	4	run
+P2	4	7	wait
+P2	7	11	run
+P2	11	17	wait
+P2	17	19	run
+P2	19	24	io
+P2	24	27	wait
+P2	27	31	run
+P2	31	33	wait
+P2	33	34	run
+P2	34	35	wait
+P2	35	36	run
+P2	36	37	wait
+P2	37	38	run
+P2	38	39	wait
+P2	39	40	run
+P2	40	45	io
+P2	45	50	run
+P3	0	4	wait
+P3	4	6	run
+P3	6	11	wait
+P3	11	14	run
+P3	14	19	io
+P3	19	24	run
+P3	24	29	io
+P3	29	31	wait
+P3	31	33	run
+P3	33	34	wait
+P3	34	35	run
+P3	35	36	wait
+P3	36	37	run
+P3	37	38	wait
+P3	38	39	run
+P3	39	44	io

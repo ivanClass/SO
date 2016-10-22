@@ -1,0 +1,8 @@
+-- Hay que compilar:
+-- gcc -Wall -g leds_user.c -o leds_user
+
+
+-- Y luego hay que ejecutar leds_user con sudo
+-- sudo ./leds_user
+
+

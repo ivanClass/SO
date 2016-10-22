@@ -1,0 +1,49 @@
+(t0): New task P1
+(t0): New task P3
+(t0): P1 running
+(t0): Task P3 migrated from CPU 0 to CPU 1 
+(t1): P1 running
+(t2): P1 running
+(t3): Task P1 goes to sleep until (t8)
+(t2): Context switch (P1)<->(P4)
+(t3): P4 running
+(t4): P4 running
+(t5): P4 running
+(t6): Task P4 goes to sleep until (t11)
+(t5): Context switch (P4)<->(idle)
+(t6): idle running
+(t7): idle running
+(t8): task P1 awoken
+(t7): Context switch (idle)<->(P1)
+(t8): P1 running
+(t9): P1 running
+(t10): P1 running
+(t11): task P4 awoken
+(t10): Context switch (P1)<->(P4)
+(t11): P4 running
+(t12): P4 running
+(t13): P4 running
+(t13): Context switch (P4)<->(P1)
+(t14): P1 running
+(t15): Task P1 goes to sleep until (t16)
+(t14): Context switch (P1)<->(P4)
+(t15): P4 running
+(t16): Task P4 goes to sleep until (t17)
+(t15): Context switch (P4)<->(idle)
+(t16): idle running
+(t17): idle running
+==================
+P1	0	3	run
+P1	3	8	io
+P1	8	11	run
+P1	11	14	wait
+P1	14	15	run
+P1	15	16	io
+P3	0	1	wait
+P4	2	3	wait
+P4	3	6	run
+P4	6	11	io
+P4	11	14	run
+P4	14	15	wait
+P4	15	16	run
+P4	16	17	io

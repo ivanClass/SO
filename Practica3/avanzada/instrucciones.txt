@@ -1,0 +1,3 @@
+./schedsim -i examples/example2.txt -s FCFS -n 2
+cd gantt-gplot/
+./generate_gantt_chart ../CPU_0.log
